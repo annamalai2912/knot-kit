@@ -358,3 +358,4 @@ export const sampleFormSteps = [
     required: true,
     completed: false
   }
+]
