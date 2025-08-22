@@ -160,3 +160,201 @@ export const sampleAPIData = {
     version: "2.1.0"
   }
 };
+
+export const sampleHistoryData = [
+  {
+    id: '1',
+    action: 'Create',
+    timestamp: new Date(Date.now() - 10 * 60 * 1000),
+    data: { type: 'component', name: 'Button' }
+  },
+  {
+    id: '2',
+    action: 'Edit',
+    timestamp: new Date(Date.now() - 8 * 60 * 1000),
+    data: { type: 'style', property: 'color' }
+  },
+  {
+    id: '3',
+    action: 'Move',
+    timestamp: new Date(Date.now() - 5 * 60 * 1000),
+    data: { type: 'element', from: 'header', to: 'sidebar' }
+  },
+  {
+    id: '4',
+    action: 'Delete',
+    timestamp: new Date(Date.now() - 3 * 60 * 1000),
+    data: { type: 'component', name: 'OldButton' }
+  },
+  {
+    id: '5',
+    action: 'Copy',
+    timestamp: new Date(Date.now() - 1 * 60 * 1000),
+    data: { type: 'component', name: 'Card' }
+  }
+];
+
+export const sampleAchievements = [
+  {
+    id: '1',
+    name: 'First Steps',
+    description: 'Created your first component',
+    icon: 'star',
+    unlocked: true,
+    unlockedAt: new Date(Date.now() - 24 * 60 * 60 * 1000),
+    rarity: 'common' as const
+  },
+  {
+    id: '2',
+    name: 'Speed Demon',
+    description: 'Completed 10 tasks in one day',
+    icon: 'zap',
+    unlocked: true,
+    unlockedAt: new Date(Date.now() - 12 * 60 * 60 * 1000),
+    rarity: 'rare' as const
+  },
+  {
+    id: '3',
+    name: 'Master Builder',
+    description: 'Built 50 components',
+    icon: 'trophy',
+    unlocked: false,
+    rarity: 'epic' as const
+  },
+  {
+    id: '4',
+    name: 'Legend',
+    description: 'Reached 1000 points',
+    icon: 'crown',
+    unlocked: false,
+    rarity: 'legendary' as const
+  }
+];
+
+export const sampleStreakData = {
+  current: 7,
+  longest: 15,
+  total: 42,
+  lastActivity: new Date(Date.now() - 2 * 60 * 60 * 1000),
+  weekData: [true, true, false, true, true, true, true]
+};
+
+export const sampleCarouselItems = [
+  {
+    id: '1',
+    title: 'Modern Web Development',
+    image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?w=400&h=300&fit=crop',
+    description: 'Build stunning web applications with modern frameworks and tools.'
+  },
+  {
+    id: '2',
+    title: 'UI/UX Design',
+    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?w=400&h=300&fit=crop',
+    description: 'Create beautiful and intuitive user interfaces that users love.'
+  },
+  {
+    id: '3',
+    title: 'Mobile Development',
+    image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?w=400&h=300&fit=crop',
+    description: 'Develop cross-platform mobile applications with React Native.'
+  },
+  {
+    id: '4',
+    title: 'Cloud Computing',
+    image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?w=400&h=300&fit=crop',
+    description: 'Deploy and scale applications using cloud infrastructure.'
+  }
+];
+
+export const sampleRoadmapItems = [
+  {
+    id: '1',
+    title: 'Project Planning',
+    description: 'Define project scope and requirements',
+    status: 'completed' as const,
+    startDate: new Date(2024, 0, 1),
+    endDate: new Date(2024, 0, 15),
+    assignees: ['John', 'Sarah'],
+    dependencies: [],
+    progress: 100
+  },
+  {
+    id: '2',
+    title: 'UI Design',
+    description: 'Create wireframes and mockups',
+    status: 'in-progress' as const,
+    startDate: new Date(2024, 0, 10),
+    endDate: new Date(2024, 1, 5),
+    assignees: ['Alice', 'Bob'],
+    dependencies: ['1'],
+    progress: 65
+  },
+  {
+    id: '3',
+    title: 'Backend Development',
+    description: 'Build API and database structure',
+    status: 'planned' as const,
+    startDate: new Date(2024, 1, 1),
+    endDate: new Date(2024, 2, 15),
+    assignees: ['Charlie', 'David'],
+    dependencies: ['1'],
+    progress: 0
+  },
+  {
+    id: '4',
+    title: 'Testing & QA',
+    description: 'Comprehensive testing and quality assurance',
+    status: 'planned' as const,
+    startDate: new Date(2024, 2, 10),
+    endDate: new Date(2024, 3, 1),
+    assignees: ['Eve'],
+    dependencies: ['2', '3'],
+    progress: 0
+  }
+];
+
+export const sampleFormSteps = [
+  {
+    id: 'personal',
+    title: 'Personal Information',
+    description: 'Basic details about yourself',
+    required: true,
+    completed: true
+  },
+  {
+    id: 'contact',
+    title: 'Contact Details',
+    description: 'How we can reach you',
+    required: true,
+    completed: true
+  },
+  {
+    id: 'preferences',
+    title: 'Preferences',
+    description: 'Customize your experience',
+    required: false,
+    completed: false,
+    substeps: [
+      {
+        id: 'notifications',
+        title: 'Notification Settings',
+        description: 'Choose how you want to be notified',
+        required: false,
+        completed: false
+      },
+      {
+        id: 'privacy',
+        title: 'Privacy Settings',
+        description: 'Control your data and privacy',
+        required: false,
+        completed: false
+      }
+    ]
+  },
+  {
+    id: 'review',
+    title: 'Review & Submit',
+    description: 'Review your information before submitting',
+    required: true,
+    completed: false
+  }
