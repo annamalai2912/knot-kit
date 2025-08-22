@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Heart, Zap, Star, Smile, ThumbsUp, Fire } from 'lucide-react';
+import { Heart, Zap, Star, Smile, ThumbsUp, Siren as Fire } from 'lucide-react';
 
 interface Reaction {
   id: string;
