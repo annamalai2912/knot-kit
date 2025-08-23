@@ -297,14 +297,15 @@ const achievements = [
     description: 'Draggable project timeline with multiple views',
     category: 'visual',
     component: <InteractiveRoadmap data={sampleRoadmapItems} />,
+    component: <InteractiveRoadmap items={sampleRoadmapItems} />,
     code: `import { InteractiveRoadmap } from './components/visual/InteractiveRoadmap';
 
-const roadmapData = [
+const roadmapItems = [
   { id: 1, title: "Project Setup", status: "completed", startDate: "2024-01-01", endDate: "2024-01-15" },
   { id: 2, title: "Development Phase", status: "in-progress", startDate: "2024-01-16", endDate: "2024-03-01" }
 ];
 
-<InteractiveRoadmap data={roadmapData} />`
+<InteractiveRoadmap items={roadmapItems} />`
   }
 ];
 

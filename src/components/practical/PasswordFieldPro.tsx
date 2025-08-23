@@ -2,22 +2,26 @@ import React, { useState, useMemo } from 'react';
 import { Eye, EyeOff, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 
 interface PasswordFieldProProps {
-  value: string;
-  onChange: (value: string) => void;
+  value?: string;
+  onChange?: (value: string) => void;
   placeholder?: string;
   showStrengthMeter?: boolean;
   showSuggestions?: boolean;
 }
 
 export const PasswordFieldPro: React.FC<PasswordFieldProProps> = ({
-  value,
-  onChange,
+  value: propValue,
+  onChange: propOnChange,
   placeholder = "Enter your password",
   showStrengthMeter = true,
   showSuggestions = true
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [focused, setFocused] = useState(false);
+  const [internalValue, setInternalValue] = useState('');
+  
+  const value = propValue !== undefined ? propValue : internalValue;
+  const onChange = propOnChange || setInternalValue;
 
   const analysis = useMemo(() => {
     const checks = {
