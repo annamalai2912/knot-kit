@@ -29,7 +29,7 @@ import { StoryCardScroller } from './components/visual/StoryCardScroller';
 import { PhysicsCarousel } from './components/visual/PhysicsCarousel';
 import { InteractiveRoadmap } from './components/visual/InteractiveRoadmap';
 
-import { sampleApiResponse, sampleDiffData, leaderboardData, achievementsData, roadmapData } from './data/sampleData';
+import { sampleAPIData, sampleDiffData, sampleLeaderboard, sampleAchievements, sampleRoadmapItems } from './data/sampleData';
 
 interface ComponentInfo {
   id: string;
@@ -170,7 +170,7 @@ const components: ComponentInfo[] = [
     name: 'API Response Viewer',
     description: 'Pretty-print JSON with filters and search',
     category: 'developer',
-    component: <APIResponseViewer data={sampleApiResponse} />,
+    component: <APIResponseViewer data={sampleAPIData} />,
     code: `import { APIResponseViewer } from './components/developer/APIResponseViewer';
 
 const sampleData = {
@@ -224,7 +224,7 @@ const sampleData = {
     name: 'Leaderboard Table',
     description: 'Styled leaderboard with animated rank changes',
     category: 'gamified',
-    component: <LeaderboardTable data={leaderboardData} />,
+    component: <LeaderboardTable data={sampleLeaderboard} />,
     code: `import { LeaderboardTable } from './components/gamified/LeaderboardTable';
 
 const leaderboardData = [
@@ -239,7 +239,7 @@ const leaderboardData = [
     name: 'Achievement Badges',
     description: 'Dynamic achievement system with unlock animations',
     category: 'gamified',
-    component: <AchievementBadges achievements={achievementsData} />,
+    component: <AchievementBadges achievements={sampleAchievements} />,
     code: `import { AchievementBadges } from './components/gamified/AchievementBadges';
 
 const achievements = [
@@ -296,7 +296,7 @@ const achievements = [
     name: 'Interactive Roadmap',
     description: 'Draggable project timeline with multiple views',
     category: 'visual',
-    component: <InteractiveRoadmap data={roadmapData} />,
+    component: <InteractiveRoadmap data={sampleRoadmapItems} />,
     code: `import { InteractiveRoadmap } from './components/visual/InteractiveRoadmap';
 
 const roadmapData = [
