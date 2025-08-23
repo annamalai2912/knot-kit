@@ -358,4 +358,19 @@ export const sampleFormSteps = [
     required: true,
     completed: false
   }
-]
+];
+
+export const sampleDiffData = {
+  oldContent: `function calculateTotal(items) {
+  let total = 0;
+  for (let i = 0; i < items.length; i++) {
+    total += items[i].price;
+  }
+  return total;
+}`,
+  newContent: `function calculateTotal(items) {
+  return items.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+}`
+};
