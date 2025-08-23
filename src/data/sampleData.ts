@@ -232,11 +232,17 @@ export const sampleAchievements = [
 ];
 
 export const sampleStreakData = {
-  current: 7,
-  longest: 15,
-  total: 42,
-  lastActivity: new Date(Date.now() - 2 * 60 * 60 * 1000),
-  weekData: [true, true, false, true, true, true, true]
+  currentStreak: 7,
+  longestStreak: 15,
+  weekData: [
+    { day: 'Mon', completed: true, date: '2024-01-15' },
+    { day: 'Tue', completed: true, date: '2024-01-16' },
+    { day: 'Wed', completed: false, date: '2024-01-17' },
+    { day: 'Thu', completed: true, date: '2024-01-18' },
+    { day: 'Fri', completed: true, date: '2024-01-19' },
+    { day: 'Sat', completed: true, date: '2024-01-20' },
+    { day: 'Sun', completed: true, date: '2024-01-21' }
+  ]
 };
 
 export const sampleCarouselItems = [

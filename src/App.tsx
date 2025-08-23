@@ -255,9 +255,19 @@ const achievements = [
     description: 'Visual habit tracking with motivational messages',
     category: 'gamified',
     component: <StreakTracker />,
+    component: <StreakTracker streakData={sampleStreakData} />,
     code: `import { StreakTracker } from './components/gamified/StreakTracker';
 
-<StreakTracker />`
+const streakData = {
+  currentStreak: 7,
+  longestStreak: 15,
+  weekData: [
+    { day: 'Mon', completed: true, date: '2024-01-15' },
+    { day: 'Tue', completed: true, date: '2024-01-16' }
+  ]
+};
+
+<StreakTracker streakData={streakData} />`
   },
 
   // Visual & Creative Components
